@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Furnishify - Products</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>Furnishify</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Products Section with Categories -->
+    <section id="all-products" class="products">
+        <h2>Our Products</h2>
+        <div class="product-category">
+            <h3>Chairs</h3>
+            <div class="product-list">
+                <div class="product-card">
+                    <img src="chair1.jpg" alt="Modern Chair">
+                    <p>Modern Chair - $50.00</p>
+                    <button onclick="addToCart('Modern Chair')">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="chair2.jpg" alt="Classic Chair">
+                    <p>Classic Chair - $75.00</p>
+                    <button onclick="addToCart('Classic Chair')">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="product-category">
+            <h3>Tables</h3>
+            <div class="product-list">
+                <div class="product-card">
+                    <img src="table1.jpg" alt="Dining Table">
+                    <p>Dining Table - $120.00</p>
+                    <button onclick="addToCart('Dining Table')">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="table2.jpg" alt="Coffee Table">
+                    <p>Coffee Table - $85.00</p>
+                    <button onclick="addToCart('Coffee Table')">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-category">
+            <h3>Sofas</h3>
+            <div class="product-list">
+                <div class="product-card">
+                    <img src="sofa1.jpg" alt="Comfy Sofa">
+                    <p>Comfy Sofa - $250.00</p>
+                    <button onclick="addToCart('Comfy Sofa')">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="sofa2.jpg" alt="Luxury Sofa">
+                    <p>Luxury Sofa - $300.00</p>
+                    <button onclick="addToCart('Luxury Sofa')">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-category">
+            <h3>Bookshelves</h3>
+            <div class="product-list">
+                <div class="product-card">
+                    <img src="bookshelf1.jpg" alt="Wooden Bookshelf">
+                    <p>Wooden Bookshelf - $180.00</p>
+                    <button onclick="addToCart('Wooden Bookshelf')">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="bookshelf2.jpg" alt="Metal Bookshelf">
+                    <p>Metal Bookshelf - $220.00</p>
+                    <button onclick="addToCart('Metal Bookshelf')">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2023 Furnishify | All Rights Reserved</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
