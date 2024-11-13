@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Furnishify - Cart</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header Section with Navbar -->
+    <header>
+        <h1>Furnishify</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="cart.html">Cart</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Cart Section -->
+    <section id="cart" class="cart">
+        <h2>Your Cart</h2>
+        <div id="cart-items">
+            <!-- JavaScript will dynamically add cart items here -->
+        </div>
+        <p id="empty-cart-message">Your cart is empty.</p>
+
+        <div id="total-section">
+            <p id="total-amount">Total: $0</p>
+            <p>Delivery Charge: $120</p>
+            <p id="grand-total">Grand Total: $0</p>
+        </div>
+
+        <button onclick="clearCart()">Clear Cart</button>
+
+        <!-- Checkout Form -->
+        <section id="checkout">
+            <h3>Checkout</h3>
+            <form id="checkout-form" onsubmit="handleCheckout(event)">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="address">Delivery Address:</label>
+                <textarea id="address" name="address" required></textarea>
+
+                <label for="payment-method">Payment Method:</label>
+                <select id="payment-method" name="payment-method" required>
+                    <option value="cod">Cash on Delivery</option>
+                    <option value="card">Credit/Debit Card</option>
+                    <option value="paypal">PayPal</option>
+                </select>
+
+                <button type="submit">Place Order</button>
+            </form>
+        </section>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2023 Furnishify | All Rights Reserved</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
