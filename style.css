@@ -308,3 +308,23 @@ footer {
     color: #fff;
     margin-top: 40px;
 }
+
+
+
+
+
+/* Cart Page Specific Styling */
+
+.cart-item button {
+    background-color: #c0392b;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cart-item button:hover {
+    background-color: #e74c3c;
+}
+
