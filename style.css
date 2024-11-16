@@ -221,56 +221,41 @@ footer {
 }
 
 
-/* Cart Section */
-.cart {
-    padding: 20px;
-    text-align: center;
+/* Cart Page Styling */
+#cart {
+    margin-top: 30px;
 }
 
-.cart h2 {
-    font-size: 28px;
+#cart h1 {
+    font-size: 2em;
     margin-bottom: 20px;
 }
 
-#cart-items {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+#cart-items-section, #cart-summary {
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+    margin-top: 20px;
 }
 
 .cart-item {
     display: flex;
     justify-content: space-between;
-    padding: 10px;
-    border: 1px solid #ddd;
-    background-color: #f9f9f9;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
 }
 
-.cart-item p {
-    margin: 0;
+.cart-item p, .cart-item label {
+    margin: 5px 0;
 }
 
-.cart-item button {
-    background-color: #ff6b6b;
-    color: #fff;
-    border: none;
-    padding: 5px 10px;
-    cursor: pointer;
+#cart-summary p {
+    font-size: 1.2em;
+    margin: 10px 0;
 }
 
-#total-section {
-    margin-top: 20px;
-    font-size: 18px;
-}
-
-#checkout {
+#checkout-form {
     margin-top: 30px;
-    text-align: left;
-}
-
-#checkout h3 {
-    font-size: 24px;
-    margin-bottom: 15px;
 }
 
 #checkout-form label {
@@ -278,17 +263,48 @@ footer {
     margin-top: 10px;
 }
 
-#checkout-form input,
-#checkout-form select,
-#checkout-form textarea {
-    width: 100%;
-    padding: 8px;
-    margin-top: 5px;
+/* Button Styling */
+button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
 }
 
-button {
-    margin-top: 20px;
-    padding: 10px 15px;
-    font-size: 16px;
-    cursor: pointer;
+button:hover {
+    background-color: #575757;
+}
+
+
+
+
+
+/* Navbar Styling */
+.navbar {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+    background-color: #333;
+    justify-content: center;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 20px;
+}
+
+.navbar a:hover {
+    background-color: #575757;
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+    margin-top: 40px;
 }
