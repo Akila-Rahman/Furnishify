@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cart - Furnishify</title>
     <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
 </head>
 <body>
     <!-- Navbar -->
     <header>
         <nav>
-            <ul>
+            <ul class="navbar">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="products.html">Products</a></li>
                 <li><a href="about.html">About</a></li>
@@ -22,42 +23,38 @@
 
     <!-- Cart Section -->
     <main>
-        <section id="cart">
-            <h1>Your Cart</h1>
-            <div id="cart-items-section">
-                <div id="cart-items"></div>
-                <div id="empty-cart-message" style="display:none;">Your cart is empty.</div>
-            </div>
-            <div id="cart-summary">
-                <p id="total-amount">Total: $0.00</p>
-                <p>Delivery Charge: $120.00</p>
-                <p id="grand-total">Grand Total: $120.00</p>
-                <button onclick="clearCart()">Clear Cart</button>
-                <button onclick="displayCheckoutForm()">Proceed to Checkout</button>
-            </div>
-        </section>
+        <h1>Your Cart</h1>
+        <div id="empty-cart-message">Your cart is empty.</div>
+        <div id="cart-items"></div>
+
+        <div id="cart-summary">
+            <p id="total-amount">Total: $0.00</p>
+            <p>Delivery Charge: $120</p>
+            <p id="grand-total">Grand Total: $120.00</p>
+            <button onclick="clearCart()">Clear Cart</button>
+            <button onclick="displayCheckoutForm()">Checkout</button>
+        </div>
 
         <!-- Checkout Form -->
-        <section id="checkout-form" style="display:none;">
+        <form id="checkout-form" style="display: none;" onsubmit="handleCheckout(event)">
             <h2>Checkout</h2>
-            <form onsubmit="handleCheckout(event)">
-                <label for="name">Name:</label>
-                <input type="text" id="name" required>
-
-                <label for="address">Delivery Address:</label>
-                <textarea id="address" required></textarea>
-
-                <label for="payment-method">Payment Method:</label>
-                <select id="payment-method" required>
-                    <option value="cod">Cash on Delivery</option>
-                    <option value="card">Credit/Debit Card</option>
-                </select>
-
-                <button type="submit">Complete Order</button>
-            </form>
-        </section>
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+            <label for="address">Delivery Address:</label>
+            <textarea id="address" rows="4" required></textarea>
+            <label for="payment-method">Payment Method:</label>
+            <select id="payment-method" required>
+                <option value="">Select Payment Method</option>
+                <option value="cod">Cash on Delivery</option>
+                <option value="card">Credit/Debit Card</option>
+            </select>
+            <button type="submit">Place Order</button>
+        </form>
     </main>
 
-    <script src="script.js"></script>
+    <!-- Footer -->
+    <footer>
+        <p>© 2023 Furnishify. All rights reserved.</p>
+    </footer>
 </body>
 </html>
